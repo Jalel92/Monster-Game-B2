@@ -1,9 +1,10 @@
 from db_init import *
+from game import *
 
 def afficher_menu() :
     #afficher en tete
     #afficher consigne
-    #afficher les choix (1.Demarrer une partie | 2. Afficher les 3 meilleurs scores | 3. Quitter la partie) 
+    #afficher les choix (1.Demarrer une partie | 2. Afficher les 3 meilleurs scores | 3. Quitter le jeu) 
     #l'utilisateur rentre ses choix
     #si le choix n'est pas dans 1,2 ou 3
         #reproposer les choix en informant que le format précedent était mauvais
@@ -13,7 +14,7 @@ def afficher_menu() :
         #si le choix est 2 :
             #affiche les 3 meilleurs scores(appel de la fonction correspondate)
         #si le choix est 3 :
-            #quitte la partie
+            #quitte la partie (appel la fonction correspondante)
 
 
 def creer_equipe():
@@ -32,16 +33,13 @@ def demander_pseudo() :
     #l'utilisateur rentre son pseudo (en string)
     #si le pseudo depasse 10 caractères :
         #reproposer le choix
-    #retourn la chaine de caractères avec le pseudo
+    #retourne la chaine de caractères avec le pseudo
 
-def enregistrer_score() :
-    pass
-
-def nouvelle_partie() :
-    pass
+def quitter() :
+    #quitte le jeu
 
 def afficher_meilleurs_score() :
-    pass
+    #retourn les 3 meilleurs scores depuis mongodb
 
 def main() :
-    pass
+    afficher_menu()
